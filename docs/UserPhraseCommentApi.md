@@ -137,7 +137,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **updateUserPhraseComment**
-> UserPhraseComment updateUserPhraseComment(body)
+> updateUserPhraseComment(body)
 
 Update an existing userPhraseComment
 
@@ -149,8 +149,7 @@ var api_instance = new UserPhraseCommentApi();
 var body = new UserPhraseComment(); // UserPhraseComment | UserPhraseComment object that needs to be added to the Database
 
 try {
-    var result = api_instance.updateUserPhraseComment(body);
-    print(result);
+    api_instance.updateUserPhraseComment(body);
 } catch (e) {
     print("Exception when calling UserPhraseCommentApi->updateUserPhraseComment: $e\n");
 }
@@ -164,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserPhraseComment**](UserPhraseComment.md)
+void (empty response body)
 
 ### Authorization
 
@@ -173,7 +172,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

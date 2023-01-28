@@ -214,7 +214,7 @@ class UserPhraseApi {
   /// Edits a userPhrase in the db
   ///
   /// 
-  Future<UserPhrase> updateUserPhrase(UserPhrase body) async {
+  Future updateUserPhrase(UserPhrase body) async {
     Object postBody = body;
 
     // verify required params are set
@@ -257,9 +257,9 @@ class UserPhraseApi {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
       return
-          apiClient.deserialize(response.body, 'UserPhrase') as UserPhrase ;
+          ;
     } else {
-      return null;
+      return ;
     }
   }
 }

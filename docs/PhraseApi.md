@@ -12,11 +12,10 @@ Method | HTTP request | Description
 [**addPhrase**](PhraseApi.md#addPhrase) | **POST** /phrase | Add a new phrase to the Database
 [**deletePhrase**](PhraseApi.md#deletePhrase) | **DELETE** /phrase/{phraseId} | Delete an existing phrase
 [**getPhraseById**](PhraseApi.md#getPhraseById) | **POST** /phrase/{phraseId} | Gets a phrase with a given phraseId from the Database.
-[**getPhrasesFromPhraseSet**](PhraseApi.md#getPhrasesFromPhraseSet) | **POST** /phraseSet/{targetPhraseSetId} | Retrieves a number of phrases from a phrase set.
 [**updatePhrase**](PhraseApi.md#updatePhrase) | **PUT** /phrase | Update an existing phrase
 
 # **addPhrase**
-> addPhrase(body)
+> Phrase addPhrase(body)
 
 Add a new phrase to the Database
 
@@ -28,7 +27,8 @@ var api_instance = new PhraseApi();
 var body = new Phrase(); // Phrase | Phrase object that needs to be added to the Database
 
 try {
-    api_instance.addPhrase(body);
+    var result = api_instance.addPhrase(body);
+    print(result);
 } catch (e) {
     print("Exception when calling PhraseApi->addPhrase: $e\n");
 }
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Phrase**](Phrase.md)
 
 ### Authorization
 
@@ -51,7 +51,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -136,53 +136,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getPhrasesFromPhraseSet**
-> List<Phrase> getPhrasesFromPhraseSet(body, targetPhraseSetId)
-
-Retrieves a number of phrases from a phrase set.
-
-Number should be greater than 0.
-
-### Example
-```dart
-import 'package:swagger/api.dart';
-
-var api_instance = new PhraseApi();
-var body = new int(); // int | Number of phrases to retrieve from the DB
-var targetPhraseSetId = 789; // int | The phraseSetId of the phrase set you want to get your phrases from
-
-try {
-    var result = api_instance.getPhrasesFromPhraseSet(body, targetPhraseSetId);
-    print(result);
-} catch (e) {
-    print("Exception when calling PhraseApi->getPhrasesFromPhraseSet: $e\n");
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**int**](int.md)| Number of phrases to retrieve from the DB | 
- **targetPhraseSetId** | **int**| The phraseSetId of the phrase set you want to get your phrases from | 
-
-### Return type
-
-[**List<Phrase>**](Phrase.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **updatePhrase**
-> Phrase updatePhrase(body)
+> updatePhrase(body)
 
 Update an existing phrase
 
@@ -194,8 +149,7 @@ var api_instance = new PhraseApi();
 var body = new Phrase(); // Phrase | Phrase object that needs to be added to the Database
 
 try {
-    var result = api_instance.updatePhrase(body);
-    print(result);
+    api_instance.updatePhrase(body);
 } catch (e) {
     print("Exception when calling PhraseApi->updatePhrase: $e\n");
 }
@@ -209,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Phrase**](Phrase.md)
+void (empty response body)
 
 ### Authorization
 
@@ -218,7 +172,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

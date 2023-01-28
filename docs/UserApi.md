@@ -137,7 +137,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **updateUser**
-> User updateUser(body)
+> updateUser(body)
 
 Edits user with given info
 
@@ -149,8 +149,7 @@ var api_instance = new UserApi();
 var body = new User(); // User | User object
 
 try {
-    var result = api_instance.updateUser(body);
-    print(result);
+    api_instance.updateUser(body);
 } catch (e) {
     print("Exception when calling UserApi->updateUser: $e\n");
 }
@@ -164,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**User**](User.md)
+void (empty response body)
 
 ### Authorization
 
@@ -173,7 +172,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -8,7 +8,7 @@ class UserPhrase {
 
   int userId = null;
 
-  String dateTime = null;
+  DateTime dateTime = null;
 
   String filepath = null;
 
@@ -24,7 +24,7 @@ class UserPhrase {
     id = json['id'];
     phraseId = json['phraseId'];
     userId = json['userId'];
-    dateTime = json['dateTime'];
+    dateTime = json['dateTime'] == null ? null : DateTime.parse(json['dateTime']);
     filepath = json['filepath'];
   }
 
@@ -33,7 +33,7 @@ class UserPhrase {
       'id': id,
       'phraseId': phraseId,
       'userId': userId,
-      'dateTime': dateTime,
+      'dateTime': dateTime == null ? '' : dateTime.toUtc().toIso8601String(),
       'filepath': filepath
      };
   }

@@ -30,7 +30,7 @@ void main() {
 
     // Update an existing userPhraseComment
     //
-    //Future<UserPhraseComment> updateUserPhraseComment(UserPhraseComment body) async
+    //Future updateUserPhraseComment(UserPhraseComment body) async
     test('test updateUserPhraseComment', () async {
       // TODO
     });

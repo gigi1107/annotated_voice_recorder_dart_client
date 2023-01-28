@@ -163,7 +163,7 @@ class UserApi {
   /// Edits user with given info
   ///
   /// 
-  Future<User> updateUser(User body) async {
+  Future updateUser(User body) async {
     Object postBody = body;
 
     // verify required params are set
@@ -206,9 +206,9 @@ class UserApi {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
       return
-          apiClient.deserialize(response.body, 'User') as User ;
+          ;
     } else {
-      return null;
+      return ;
     }
   }
 }

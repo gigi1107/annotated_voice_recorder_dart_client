@@ -163,7 +163,7 @@ class UserPhraseCommentApi {
   /// Update an existing userPhraseComment
   ///
   /// 
-  Future<UserPhraseComment> updateUserPhraseComment(UserPhraseComment body) async {
+  Future updateUserPhraseComment(UserPhraseComment body) async {
     Object postBody = body;
 
     // verify required params are set
@@ -206,9 +206,9 @@ class UserPhraseCommentApi {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
       return
-          apiClient.deserialize(response.body, 'UserPhraseComment') as UserPhraseComment ;
+          ;
     } else {
-      return null;
+      return ;
     }
   }
 }

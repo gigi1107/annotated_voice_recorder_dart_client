@@ -178,7 +178,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **updateUserPhrase**
-> UserPhrase updateUserPhrase(body)
+> updateUserPhrase(body)
 
 Edits a userPhrase in the db
 
@@ -190,8 +190,7 @@ var api_instance = new UserPhraseApi();
 var body = new UserPhrase(); // UserPhrase | UserPhrase object
 
 try {
-    var result = api_instance.updateUserPhrase(body);
-    print(result);
+    api_instance.updateUserPhrase(body);
 } catch (e) {
     print("Exception when calling UserPhraseApi->updateUserPhrase: $e\n");
 }
@@ -205,7 +204,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserPhrase**](UserPhrase.md)
+void (empty response body)
 
 ### Authorization
 
@@ -214,7 +213,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

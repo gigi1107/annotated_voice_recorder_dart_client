@@ -28,18 +28,9 @@ void main() {
       // TODO
     });
 
-    // Retrieves a number of phrases from a phrase set.
-    //
-    // Number should be greater than 0.
-    //
-    //Future<List<Phrase>> getPhrasesFromPhraseSet(int body, int targetPhraseSetId) async
-    test('test getPhrasesFromPhraseSet', () async {
-      // TODO
-    });
-
     // Update an existing phraseSet
     //
-    //Future<PhraseSet> updatePhraseSet(PhraseSet body) async
+    //Future updatePhraseSet(PhraseSet body) async
     test('test updatePhraseSet', () async {
       // TODO
     });

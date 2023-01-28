@@ -12,7 +12,6 @@ Method | HTTP request | Description
 [**addPhraseSet**](PhraseSetApi.md#addPhraseSet) | **POST** /phraseSet | Add a new phraseSet to the Database
 [**deletePhraseSet**](PhraseSetApi.md#deletePhraseSet) | **DELETE** /phraseSet/{phraseSetId} | Delete a phraseSet from the db
 [**getPhraseSet**](PhraseSetApi.md#getPhraseSet) | **POST** /phraseSet/{phraseSetId} | Get a phraseSet by Id
-[**getPhrasesFromPhraseSet**](PhraseSetApi.md#getPhrasesFromPhraseSet) | **POST** /phraseSet/{targetPhraseSetId} | Retrieves a number of phrases from a phrase set.
 [**updatePhraseSet**](PhraseSetApi.md#updatePhraseSet) | **PUT** /phraseSet | Update an existing phraseSet
 
 # **addPhraseSet**
@@ -137,53 +136,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getPhrasesFromPhraseSet**
-> List<Phrase> getPhrasesFromPhraseSet(body, targetPhraseSetId)
-
-Retrieves a number of phrases from a phrase set.
-
-Number should be greater than 0.
-
-### Example
-```dart
-import 'package:swagger/api.dart';
-
-var api_instance = new PhraseSetApi();
-var body = new int(); // int | Number of phrases to retrieve from the DB
-var targetPhraseSetId = 789; // int | The phraseSetId of the phrase set you want to get your phrases from
-
-try {
-    var result = api_instance.getPhrasesFromPhraseSet(body, targetPhraseSetId);
-    print(result);
-} catch (e) {
-    print("Exception when calling PhraseSetApi->getPhrasesFromPhraseSet: $e\n");
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**int**](int.md)| Number of phrases to retrieve from the DB | 
- **targetPhraseSetId** | **int**| The phraseSetId of the phrase set you want to get your phrases from | 
-
-### Return type
-
-[**List<Phrase>**](Phrase.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **updatePhraseSet**
-> PhraseSet updatePhraseSet(body)
+> updatePhraseSet(body)
 
 Update an existing phraseSet
 
@@ -195,8 +149,7 @@ var api_instance = new PhraseSetApi();
 var body = new PhraseSet(); // PhraseSet | PhraseSet object that needs to be added to the Database
 
 try {
-    var result = api_instance.updatePhraseSet(body);
-    print(result);
+    api_instance.updatePhraseSet(body);
 } catch (e) {
     print("Exception when calling PhraseSetApi->updatePhraseSet: $e\n");
 }
@@ -210,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PhraseSet**](PhraseSet.md)
+void (empty response body)
 
 ### Authorization
 
@@ -219,7 +172,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

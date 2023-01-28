@@ -30,7 +30,7 @@ void main() {
 
     // Edits user with given info
     //
-    //Future<User> updateUser(User body) async
+    //Future updateUser(User body) async
     test('test updateUser', () async {
       // TODO
     });

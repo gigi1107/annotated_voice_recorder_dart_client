@@ -47,7 +47,8 @@ var api_instance = new PhraseApi();
 var body = new Phrase(); // Phrase | Phrase object that needs to be added to the Database
 
 try {
-    api_instance.addPhrase(body);
+    var result = api_instance.addPhrase(body);
+    print(result);
 } catch (e) {
     print("Exception when calling PhraseApi->addPhrase: $e\n");
 }
@@ -62,12 +63,10 @@ Class | Method | HTTP request | Description
 *PhraseApi* | [**addPhrase**](docs//PhraseApi.md#addphrase) | **POST** /phrase | Add a new phrase to the Database
 *PhraseApi* | [**deletePhrase**](docs//PhraseApi.md#deletephrase) | **DELETE** /phrase/{phraseId} | Delete an existing phrase
 *PhraseApi* | [**getPhraseById**](docs//PhraseApi.md#getphrasebyid) | **POST** /phrase/{phraseId} | Gets a phrase with a given phraseId from the Database.
-*PhraseApi* | [**getPhrasesFromPhraseSet**](docs//PhraseApi.md#getphrasesfromphraseset) | **POST** /phraseSet/{targetPhraseSetId} | Retrieves a number of phrases from a phrase set.
 *PhraseApi* | [**updatePhrase**](docs//PhraseApi.md#updatephrase) | **PUT** /phrase | Update an existing phrase
 *PhraseSetApi* | [**addPhraseSet**](docs//PhraseSetApi.md#addphraseset) | **POST** /phraseSet | Add a new phraseSet to the Database
 *PhraseSetApi* | [**deletePhraseSet**](docs//PhraseSetApi.md#deletephraseset) | **DELETE** /phraseSet/{phraseSetId} | Delete a phraseSet from the db
 *PhraseSetApi* | [**getPhraseSet**](docs//PhraseSetApi.md#getphraseset) | **POST** /phraseSet/{phraseSetId} | Get a phraseSet by Id
-*PhraseSetApi* | [**getPhrasesFromPhraseSet**](docs//PhraseSetApi.md#getphrasesfromphraseset) | **POST** /phraseSet/{targetPhraseSetId} | Retrieves a number of phrases from a phrase set.
 *PhraseSetApi* | [**updatePhraseSet**](docs//PhraseSetApi.md#updatephraseset) | **PUT** /phraseSet | Update an existing phraseSet
 *UserApi* | [**addUser**](docs//UserApi.md#adduser) | **POST** /user | Creates user with given info
 *UserApi* | [**deleteUser**](docs//UserApi.md#deleteuser) | **DELETE** /user/{userId} | Delete an existing user

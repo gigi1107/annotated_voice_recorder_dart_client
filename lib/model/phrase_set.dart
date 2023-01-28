@@ -6,9 +6,9 @@ class PhraseSet {
 
   String phraseSetName = null;
 
-  String startDate = null;
+  DateTime startDate = null;
 
-  String endDate = null;
+  DateTime endDate = null;
 
   PhraseSet();
 
@@ -21,16 +21,16 @@ class PhraseSet {
     if (json == null) return;
     id = json['id'];
     phraseSetName = json['phraseSetName'];
-    startDate = json['startDate'];
-    endDate = json['endDate'];
+    startDate = json['startDate'] == null ? null : DateTime.parse(json['startDate']);
+    endDate = json['endDate'] == null ? null : DateTime.parse(json['endDate']);
   }
 
   Map<String, dynamic> toJson() {
     return {
       'id': id,
       'phraseSetName': phraseSetName,
-      'startDate': startDate,
-      'endDate': endDate
+      'startDate': startDate == null ? '' : startDate.toUtc().toIso8601String(),
+      'endDate': endDate == null ? '' : endDate.toUtc().toIso8601String()
      };
   }
 

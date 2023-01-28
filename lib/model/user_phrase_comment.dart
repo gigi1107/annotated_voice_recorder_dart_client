@@ -8,7 +8,7 @@ class UserPhraseComment {
 
   String comment = null;
 
-  String dateTime = null;
+  DateTime dateTime = null;
 
   int userId = null;
 
@@ -24,7 +24,7 @@ class UserPhraseComment {
     id = json['id'];
     phraseId = json['phraseId'];
     comment = json['comment'];
-    dateTime = json['dateTime'];
+    dateTime = json['dateTime'] == null ? null : DateTime.parse(json['dateTime']);
     userId = json['userId'];
   }
 
@@ -33,7 +33,7 @@ class UserPhraseComment {
       'id': id,
       'phraseId': phraseId,
       'comment': comment,
-      'dateTime': dateTime,
+      'dateTime': dateTime == null ? '' : dateTime.toUtc().toIso8601String(),
       'userId': userId
      };
   }

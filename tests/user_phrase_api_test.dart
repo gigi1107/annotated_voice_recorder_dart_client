@@ -37,7 +37,7 @@ void main() {
 
     // Edits a userPhrase in the db
     //
-    //Future<UserPhrase> updateUserPhrase(UserPhrase body) async
+    //Future updateUserPhrase(UserPhrase body) async
     test('test updateUserPhrase', () async {
       // TODO
     });
