@@ -28,3 +28,5 @@ pubspec.lock
 
 .DS_Store
 lib/.DS_Store
+
+.idea/
