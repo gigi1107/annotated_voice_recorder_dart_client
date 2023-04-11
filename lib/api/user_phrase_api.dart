@@ -5,13 +5,13 @@ part of swagger.api;
 class UserPhraseApi {
   final ApiClient apiClient;
 
-  UserPhraseApi([ApiClient apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  UserPhraseApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   /// Saves a userPhrase to db
   ///
   /// 
-  Future<UserPhrase> addUserPhrase(UserPhrase body) async {
-    Object postBody = body;
+  Future<UserPhrase?> addUserPhrase(UserPhrase? body) async {
+    Object? postBody = body;
 
     // verify required params are set
     if(body == null) {
@@ -62,7 +62,7 @@ class UserPhraseApi {
   ///
   /// 
   Future deleteUserPhrase(UserPhrase userPhrase) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(userPhrase == null) {
@@ -113,7 +113,7 @@ class UserPhraseApi {
   ///
   /// 
   Future deleteUserPhraseById(int userPhraseId) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(userPhraseId == null) {
@@ -163,8 +163,8 @@ class UserPhraseApi {
   /// Get a userPhrase by ID from the db
   ///
   /// 
-  Future<UserPhrase> getUserPhraseById(int userPhraseId) async {
-    Object postBody = null;
+  Future<UserPhrase?> getUserPhraseById(int userPhraseId) async {
+    Object? postBody = null;
 
     // verify required params are set
     if(userPhraseId == null) {
@@ -215,7 +215,7 @@ class UserPhraseApi {
   ///
   /// 
   Future updateUserPhrase(UserPhrase body) async {
-    Object postBody = body;
+    Object? postBody = body;
 
     // verify required params are set
     if(body == null) {

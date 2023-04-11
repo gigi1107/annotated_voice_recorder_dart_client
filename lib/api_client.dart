@@ -53,21 +53,21 @@ class ApiClient {
           return new UserPhraseWithAudioFile.fromJson(value);
         default:
           {
-            Match match;
+            Match? match;
             if (value is List &&
                 (match = _RegList.firstMatch(targetType)) != null) {
-              var newTargetType = match[1];
-              return value.map((v) => _deserialize(v, newTargetType)).toList();
+              var newTargetType = match![1];
+              return value.map((v) => _deserialize(v, newTargetType!)).toList();
             } else if (value is Map &&
                 (match = _RegMap.firstMatch(targetType)) != null) {
-              var newTargetType = match[1];
+              var newTargetType = match![1];
               return new Map.fromIterables(value.keys,
-                  value.values.map((v) => _deserialize(v, newTargetType)));
+                  value.values.map((v) => _deserialize(v, newTargetType!)));
             }
           }
       }
     } catch (e, stack) {
-      throw new ApiException.withInner(500, 'Exception during deserialization.', e, stack);
+      throw new ApiException.withInner(500, 'Exception during deserialization.', e as Exception, stack);
     }
     throw new ApiException(500, 'Could not find a suitable class for deserialization');
   }
@@ -82,7 +82,7 @@ class ApiClient {
     return _deserialize(decodedJson, targetType);
   }
 
-  String serialize(Object obj) {
+  String serialize(Object? obj) {
     String serialized = '';
     if (obj == null) {
       serialized = '';
@@ -96,8 +96,8 @@ class ApiClient {
   // If collectionFormat is 'multi' a key might appear multiple times.
   Future<Response> invokeAPI(String path,
                              String method,
-                             Iterable<QueryParam> queryParams,
-                             Object body,
+                             List<QueryParam> queryParams,
+                             Object? body,
                              Map<String, String> headerParams,
                              Map<String, String> formParams,
                              String contentType,
@@ -105,7 +105,10 @@ class ApiClient {
 
     _updateParamsForAuth(authNames, queryParams, headerParams);
 
-    var ps = queryParams.where((p) => p.value != null).map((p) => '${Uri.encodeComponent(p.name)}=${Uri.encodeComponent(p.value)}');
+    var ps = queryParams
+        .where((p) => p?.value != null)
+        .map((p) => '${Uri.encodeComponent(p?.name ?? '')}=${Uri.encodeComponent(p?.value ?? '')}');
+
     String queryString = ps.isNotEmpty ?
                          '?' + ps.join('&') :
                          '';
@@ -144,7 +147,7 @@ class ApiClient {
   /// @param authNames The authentications to apply
   void _updateParamsForAuth(List<String> authNames, List<QueryParam> queryParams, Map<String, String> headerParams) {
     authNames.forEach((authName) {
-      Authentication auth = _authentications[authName];
+      Authentication? auth = _authentications[authName];
       if (auth == null) throw new ArgumentError("Authentication undefined: " + authName);
       auth.applyToParams(queryParams, headerParams);
     });

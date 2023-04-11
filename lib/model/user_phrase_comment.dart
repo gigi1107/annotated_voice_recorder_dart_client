@@ -2,51 +2,60 @@ part of swagger.api;
 
 class UserPhraseComment {
   
-  int id = null;
+  int? _id = null;
 
-  int phraseId = null;
+  int? _phraseId = null;
 
-  String comment = null;
+  String? _comment = null;
 
-  DateTime dateTime = null;
+  DateTime? _dateTime = null;
 
-  int userId = null;
+  int? _userId = null;
 
-  UserPhraseComment();
+
+  int? get id => _id;
 
   @override
   String toString() {
-    return 'UserPhraseComment[id=$id, phraseId=$phraseId, comment=$comment, dateTime=$dateTime, userId=$userId, ]';
+    return 'UserPhraseComment[id=$_id, phraseId=$_phraseId, comment=$_comment, dateTime=$_dateTime, userId=$_userId, ]';
   }
 
-  UserPhraseComment.fromJson(Map<String, dynamic> json) {
+  UserPhraseComment.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
-    id = json['id'];
-    phraseId = json['phraseId'];
-    comment = json['comment'];
-    dateTime = json['dateTime'] == null ? null : DateTime.parse(json['dateTime']);
-    userId = json['userId'];
+    _id = json['id'];
+    _phraseId = json['phraseId'];
+    _comment = json['comment'];
+    _dateTime = json['dateTime'] == null ? null : DateTime.parse(json['dateTime']);
+    _userId = json['userId'];
   }
 
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
-      'phraseId': phraseId,
-      'comment': comment,
-      'dateTime': dateTime == null ? '' : dateTime.toUtc().toIso8601String(),
-      'userId': userId
+      'id': _id,
+      'phraseId': _phraseId,
+      'comment': _comment,
+      'dateTime': _dateTime == null ? '' : _dateTime?.toUtc().toIso8601String(),
+      'userId': _userId
      };
   }
 
-  static List<UserPhraseComment> listFromJson(List<dynamic> json) {
-    return json == null ? new List<UserPhraseComment>() : json.map((value) => new UserPhraseComment.fromJson(value)).toList();
+  static List<UserPhraseComment> listFromJson(List<dynamic>? json) {
+    return json == null ? <UserPhraseComment>[] : json.map((value) => new UserPhraseComment.fromJson(value)).toList();
   }
 
-  static Map<String, UserPhraseComment> mapFromJson(Map<String, Map<String, dynamic>> json) {
+  static Map<String, UserPhraseComment> mapFromJson(Map<String, Map<String, dynamic>>? json) {
     var map = new Map<String, UserPhraseComment>();
     if (json != null && json.length > 0) {
       json.forEach((String key, Map<String, dynamic> value) => map[key] = new UserPhraseComment.fromJson(value));
     }
     return map;
   }
+
+  int? get phraseId => _phraseId;
+
+  String? get comment => _comment;
+
+  DateTime? get dateTime => _dateTime;
+
+  int? get userId => _userId;
 }

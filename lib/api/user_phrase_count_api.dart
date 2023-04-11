@@ -5,13 +5,13 @@ part of swagger.api;
 class UserPhraseCountApi {
   final ApiClient apiClient;
 
-  UserPhraseCountApi([ApiClient apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  UserPhraseCountApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   /// get All Remaining PhraseIds For A User And PhraseSet
   ///
   /// 
-  Future<List<int>> getAllRemainingPhraseIdsForAUserAndPhraseSet(PhraseRequest body) async {
-    Object postBody = body;
+  Future<List<int>?> getAllRemainingPhraseIdsForAUserAndPhraseSet(PhraseRequest? body) async {
+    Object? postBody = body;
 
     // verify required params are set
     if(body == null) {

@@ -5,13 +5,13 @@ part of swagger.api;
 class UserPhraseWithAudioApi {
   final ApiClient apiClient;
 
-  UserPhraseWithAudioApi([ApiClient apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  UserPhraseWithAudioApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   /// Gets file from bucket with given keypath
   ///
   /// 
-  Future<User> getFileFromBucket(String keypath) async {
-    Object postBody = null;
+  Future<User?> getFileFromBucket(String? keypath) async {
+    Object? postBody = null;
 
     // verify required params are set
     if(keypath == null) {
@@ -61,8 +61,8 @@ class UserPhraseWithAudioApi {
   /// Saves a voice recording to bucket for a particular user
   ///
   /// 
-  Future<UserPhrase> saveAudioFileToBucket(UserPhraseWithAudioFile body) async {
-    Object postBody = body;
+  Future<UserPhrase?> saveAudioFileToBucket(UserPhraseWithAudioFile? body) async {
+    Object? postBody = body;
 
     // verify required params are set
     if(body == null) {

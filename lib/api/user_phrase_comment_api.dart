@@ -5,13 +5,13 @@ part of swagger.api;
 class UserPhraseCommentApi {
   final ApiClient apiClient;
 
-  UserPhraseCommentApi([ApiClient apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  UserPhraseCommentApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   /// Add a new UserPhraseComment to the Database
   ///
   /// 
-  Future<UserPhraseComment> addUserPhraseComment(UserPhraseComment body) async {
-    Object postBody = body;
+  Future<UserPhraseComment?> addUserPhraseComment(UserPhraseComment? body) async {
+    Object? postBody = body;
 
     // verify required params are set
     if(body == null) {
@@ -61,8 +61,8 @@ class UserPhraseCommentApi {
   /// Delete a UserPhraseComment from the db
   ///
   /// 
-  Future deleteUserPhraseComment(int userPhraseCommentId) async {
-    Object postBody = null;
+  Future deleteUserPhraseComment(int? userPhraseCommentId) async {
+    Object? postBody = null;
 
     // verify required params are set
     if(userPhraseCommentId == null) {
@@ -112,8 +112,8 @@ class UserPhraseCommentApi {
   /// Get a UserPhraseComment by Id
   ///
   /// 
-  Future<UserPhraseComment> getUserPhraseComment(int userPhraseCommentId) async {
-    Object postBody = null;
+  Future<UserPhraseComment?> getUserPhraseComment(int? userPhraseCommentId) async {
+    Object? postBody = null;
 
     // verify required params are set
     if(userPhraseCommentId == null) {
@@ -163,8 +163,8 @@ class UserPhraseCommentApi {
   /// Update an existing userPhraseComment
   ///
   /// 
-  Future updateUserPhraseComment(UserPhraseComment body) async {
-    Object postBody = body;
+  Future updateUserPhraseComment(UserPhraseComment? body) async {
+    Object? postBody = body;
 
     // verify required params are set
     if(body == null) {

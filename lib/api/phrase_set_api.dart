@@ -5,13 +5,13 @@ part of swagger.api;
 class PhraseSetApi {
   final ApiClient apiClient;
 
-  PhraseSetApi([ApiClient apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  PhraseSetApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   /// Add a new phraseSet to the Database
   ///
   /// 
-  Future<PhraseSet> addPhraseSet(PhraseSet body) async {
-    Object postBody = body;
+  Future<PhraseSet?> addPhraseSet(PhraseSet? body) async {
+    Object? postBody = body;
 
     // verify required params are set
     if(body == null) {
@@ -61,8 +61,8 @@ class PhraseSetApi {
   /// Delete a phraseSet from the db
   ///
   /// 
-  Future deletePhraseSet(int phraseSetId) async {
-    Object postBody = null;
+  Future deletePhraseSet(int? phraseSetId) async {
+    Object? postBody = null;
 
     // verify required params are set
     if(phraseSetId == null) {
@@ -112,8 +112,8 @@ class PhraseSetApi {
   /// Get a phraseSet by Id
   ///
   /// 
-  Future<PhraseSet> getPhraseSet(int phraseSetId) async {
-    Object postBody = null;
+  Future<PhraseSet?> getPhraseSet(int? phraseSetId) async {
+    Object? postBody = null;
 
     // verify required params are set
     if(phraseSetId == null) {
@@ -163,8 +163,8 @@ class PhraseSetApi {
   /// Update an existing phraseSet
   ///
   /// 
-  Future updatePhraseSet(PhraseSet body) async {
-    Object postBody = body;
+  Future updatePhraseSet(PhraseSet? body) async {
+    Object? postBody = body;
 
     // verify required params are set
     if(body == null) {

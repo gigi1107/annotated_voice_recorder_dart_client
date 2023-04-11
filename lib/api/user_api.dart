@@ -5,13 +5,13 @@ part of swagger.api;
 class UserApi {
   final ApiClient apiClient;
 
-  UserApi([ApiClient apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  UserApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   /// Creates user with given info
   ///
   /// 
-  Future<User> addUser(User body) async {
-    Object postBody = body;
+  Future<User?> addUser(User? body) async {
+    Object? postBody = body;
 
     // verify required params are set
     if(body == null) {
@@ -61,8 +61,8 @@ class UserApi {
   /// Delete an existing user
   ///
   /// 
-  Future deleteUser(int userId) async {
-    Object postBody = null;
+  Future deleteUser(int? userId) async {
+    Object? postBody = null;
 
     // verify required params are set
     if(userId == null) {
@@ -112,8 +112,8 @@ class UserApi {
   /// Gets user with given userId
   ///
   /// 
-  Future<User> getUser(int userId) async {
-    Object postBody = null;
+  Future<User?> getUser(int? userId) async {
+    Object? postBody = null;
 
     // verify required params are set
     if(userId == null) {
@@ -164,7 +164,7 @@ class UserApi {
   ///
   /// 
   Future updateUser(User body) async {
-    Object postBody = body;
+    Object? postBody = body;
 
     // verify required params are set
     if(body == null) {
