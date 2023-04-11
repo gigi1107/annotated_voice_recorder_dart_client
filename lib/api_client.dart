@@ -18,8 +18,11 @@ class ApiClient {
   final _RegList = new RegExp(r'^List<(.*)>$');
   final _RegMap = new RegExp(r'^Map<String,(.*)>$');
 
-  ApiClient({this.basePath: "https://indigenous.io/v1"}) {
-    // Setup authentications (key: authentication name, value: authentication).
+  // ApiClient({this.basePath: "https://indigenous.io/v1"}) {
+  //   // Setup authentications (key: authentication name, value: authentication).
+  // }
+  ApiClient({this.basePath: "http://localhost:8080/v1"}) {
+
   }
 
   void addDefaultHeader(String key, String value) {
@@ -113,13 +116,18 @@ class ApiClient {
                          '?' + ps.join('&') :
                          '';
 
-    String url = basePath + path + queryString;
+
+    Uri url = Uri(
+           scheme: 'http',
+           host: 'localhost:8080',
+           path: path,
+           fragment: queryString);
 
     headerParams.addAll(_defaultHeaderMap);
     headerParams['Content-Type'] = contentType;
 
     if(body is MultipartRequest) {
-      var request = new MultipartRequest(method, Uri.parse(url));
+      var request = new MultipartRequest(method, url);
       request.fields.addAll(body.fields);
       request.files.addAll(body.files);
       request.headers.addAll(body.headers);

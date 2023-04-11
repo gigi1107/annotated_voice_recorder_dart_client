@@ -31,14 +31,7 @@ class UserPhraseCommentApi {
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
     List<String> authNames = [];
 
-    if(contentType.startsWith("multipart/form-data")) {
-      bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
-      if(hasFields)
-        postBody = mp;
-    }
-    else {
-          }
+
 
     var response = await apiClient.invokeAPI(path,
                                              'POST',
@@ -82,14 +75,7 @@ class UserPhraseCommentApi {
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
     List<String> authNames = [];
 
-    if(contentType.startsWith("multipart/form-data")) {
-      bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
-      if(hasFields)
-        postBody = mp;
-    }
-    else {
-          }
+
 
     var response = await apiClient.invokeAPI(path,
                                              'DELETE',
@@ -133,14 +119,7 @@ class UserPhraseCommentApi {
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
     List<String> authNames = [];
 
-    if(contentType.startsWith("multipart/form-data")) {
-      bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
-      if(hasFields)
-        postBody = mp;
-    }
-    else {
-          }
+
 
     var response = await apiClient.invokeAPI(path,
                                              'POST',
@@ -184,14 +163,7 @@ class UserPhraseCommentApi {
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
     List<String> authNames = [];
 
-    if(contentType.startsWith("multipart/form-data")) {
-      bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
-      if(hasFields)
-        postBody = mp;
-    }
-    else {
-          }
+
 
     var response = await apiClient.invokeAPI(path,
                                              'PUT',
