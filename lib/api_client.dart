@@ -21,7 +21,7 @@ class ApiClient {
   // ApiClient({this.basePath: "https://indigenous.io/v1"}) {
   //   // Setup authentications (key: authentication name, value: authentication).
   // }
-  ApiClient({this.basePath: "http://localhost:8080/v1"}) {
+  ApiClient({this.basePath: "http://127.0.0.1:8080/v1"}) {
 
   }
 
@@ -129,7 +129,7 @@ class ApiClient {
 
     Uri url = Uri(
            scheme: 'http',
-           host: 'localhost:8080',
+           host: '127.0.0.1:8080',
            path: path,
            fragment: queryString);
 
