@@ -126,12 +126,13 @@ class ApiClient {
                          '?' + ps.join('&') :
                          '';
 
-
     Uri url = Uri(
-           scheme: 'http',
-           host: '::1:8080',
-           path: path,
-           fragment: queryString);
+      scheme: 'http',
+      host: '127.0.0.1',
+      port: 8080,
+      path: path,
+    );
+
 
     headerParams.addAll(_defaultHeaderMap);
     headerParams['Content-Type'] = contentType;
