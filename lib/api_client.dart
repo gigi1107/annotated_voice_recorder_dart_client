@@ -129,7 +129,7 @@ class ApiClient {
 
     Uri url = Uri(
            scheme: 'http',
-           host: '127.0.0.1:8080',
+           host: '::1:8080',
            path: path,
            fragment: queryString);
 
