@@ -3,15 +3,15 @@
   "packages": [
     {
       "name": "_fe_analyzer_shared",
-      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-22.0.0",
+      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-58.0.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.17"
     },
     {
       "name": "analyzer",
-      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/analyzer-1.7.2",
+      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/analyzer-5.10.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.19"
     },
     {
       "name": "args",
@@ -32,12 +32,6 @@
       "languageVersion": "2.17"
     },
     {
-      "name": "cli_util",
-      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/cli_util-0.3.5",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "collection",
       "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/collection-1.17.1",
       "packageUri": "lib/",
@@ -51,9 +45,9 @@
     },
     {
       "name": "coverage",
-      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/coverage-1.0.3",
+      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/coverage-1.6.3",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.18"
     },
     {
       "name": "crypto",
@@ -64,6 +58,12 @@
     {
       "name": "file",
       "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/file-6.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "frontend_server_client",
+      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/frontend_server_client-3.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -111,9 +111,9 @@
     },
     {
       "name": "matcher",
-      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/matcher-0.12.10",
+      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/matcher-0.12.15",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.18"
     },
     {
       "name": "meta",
@@ -123,15 +123,15 @@
     },
     {
       "name": "mime",
-      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/mime-1.0.0",
+      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/mime-1.0.4",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.18"
     },
     {
       "name": "node_preamble",
-      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/node_preamble-1.4.13",
+      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/node_preamble-2.0.2",
       "packageUri": "lib/",
-      "languageVersion": "1.24"
+      "languageVersion": "2.12"
     },
     {
       "name": "package_config",
@@ -142,12 +142,6 @@
     {
       "name": "path",
       "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/path-1.8.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "pedantic",
-      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/pedantic-1.11.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -171,21 +165,21 @@
     },
     {
       "name": "shelf_packages_handler",
-      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/shelf_packages_handler-2.0.1",
+      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/shelf_packages_handler-3.0.1",
       "packageUri": "lib/",
-      "languageVersion": "2.8"
+      "languageVersion": "2.14"
     },
     {
       "name": "shelf_static",
-      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/shelf_static-0.2.9+2",
+      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/shelf_static-1.1.1",
       "packageUri": "lib/",
-      "languageVersion": "2.3"
+      "languageVersion": "2.14"
     },
     {
       "name": "shelf_web_socket",
-      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/shelf_web_socket-0.2.4+1",
+      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/shelf_web_socket-1.0.3",
       "packageUri": "lib/",
-      "languageVersion": "2.1"
+      "languageVersion": "2.17"
     },
     {
       "name": "source_map_stack_trace",
@@ -231,21 +225,21 @@
     },
     {
       "name": "test",
-      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/test-1.16.5",
+      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/test-1.24.1",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.18"
     },
     {
       "name": "test_api",
-      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/test_api-0.2.19",
+      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/test_api-0.5.1",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.18"
     },
     {
       "name": "test_core",
-      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/test_core-0.3.15",
+      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/test_core-0.5.1",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.18"
     },
     {
       "name": "typed_data",
@@ -255,9 +249,9 @@
     },
     {
       "name": "vm_service",
-      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/vm_service-6.2.0",
+      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/vm_service-11.3.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.19"
     },
     {
       "name": "watcher",
@@ -267,9 +261,9 @@
     },
     {
       "name": "web_socket_channel",
-      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/web_socket_channel-2.3.0",
+      "rootUri": "file:///Users/gdavidson/.pub-cache/hosted/pub.dev/web_socket_channel-2.4.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.15"
     },
     {
       "name": "webkit_inspection_protocol",
@@ -290,7 +284,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2023-04-11T06:16:35.809023Z",
+  "generated": "2023-04-14T21:47:02.915252Z",
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }

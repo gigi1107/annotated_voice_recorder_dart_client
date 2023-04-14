@@ -10,7 +10,7 @@ class QueryParam {
 class ApiClient {
 
   String basePath;
-  var client = new BrowserClient();
+  var client = createClient();
 
   Map<String, String> _defaultHeaderMap = {};
   Map<String, Authentication> _authentications = {};
@@ -24,6 +24,17 @@ class ApiClient {
   ApiClient({this.basePath: "http://localhost:8080/v1"}) {
 
   }
+
+  static Client createClient() {
+    // if (isBrowser()) {
+    //   return new BrowserClient();
+    // } else {
+      return new Client();
+    // }
+  }
+
+  // static bool isBrowser() => identical(0, 0.0);
+
 
   void addDefaultHeader(String key, String value) {
      _defaultHeaderMap[key] = value;
@@ -109,8 +120,7 @@ class ApiClient {
     _updateParamsForAuth(authNames, queryParams, headerParams);
 
     var ps = queryParams
-        .where((p) => p?.value != null)
-        .map((p) => '${Uri.encodeComponent(p?.name ?? '')}=${Uri.encodeComponent(p?.value ?? '')}');
+        .map((p) => '${Uri.encodeComponent(p.name)}=${Uri.encodeComponent(p.value)}');
 
     String queryString = ps.isNotEmpty ?
                          '?' + ps.join('&') :
