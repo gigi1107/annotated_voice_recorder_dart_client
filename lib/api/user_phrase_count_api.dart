@@ -42,7 +42,7 @@ class UserPhraseCountApi {
 
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
-    } else if(response.body != null) {
+    } else if(response.body != "") {
       return
         (apiClient.deserialize(response.body, 'List<int>') as List).map((item) => item as int).toList();
     } else {

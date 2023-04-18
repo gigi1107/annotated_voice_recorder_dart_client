@@ -31,6 +31,7 @@ class UserPhraseWithAudioApi {
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
     List<String> authNames = [];
 
+
     var response = await apiClient.invokeAPI(path,
                                              'POST',
                                              queryParams,
@@ -42,7 +43,7 @@ class UserPhraseWithAudioApi {
 
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
-    } else if(response.body != null) {
+    } else if(response.body != "") {
       return
           apiClient.deserialize(response.body, 'User') as User ;
     } else {
@@ -84,7 +85,7 @@ class UserPhraseWithAudioApi {
 
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
-    } else if(response.body != null) {
+    } else if(response.body != "") {
       return
           apiClient.deserialize(response.body, 'UserPhrase') as UserPhrase ;
     } else {

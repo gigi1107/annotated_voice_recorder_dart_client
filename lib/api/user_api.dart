@@ -31,7 +31,6 @@ class UserApi {
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
     List<String> authNames = [];
 
-
     var response = await apiClient.invokeAPI(path,
                                              'POST',
                                              queryParams,
@@ -43,7 +42,7 @@ class UserApi {
 
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
-    } else if(response.body != null) {
+    } else if(response.body != "") {
       return
           apiClient.deserialize(response.body, 'User') as User ;
     } else {
@@ -85,7 +84,7 @@ class UserApi {
 
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
-    } else if(response.body != null) {
+    } else if(response.body != "") {
       return
           ;
     } else {
@@ -116,7 +115,6 @@ class UserApi {
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
     List<String> authNames = [];
 
-
     var response = await apiClient.invokeAPI(path,
                                              'POST',
                                              queryParams,
@@ -128,7 +126,7 @@ class UserApi {
 
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
-    } else if(response.body != null) {
+    } else if(response.body != "") {
       return
           apiClient.deserialize(response.body, 'User') as User ;
     } else {
@@ -138,7 +136,7 @@ class UserApi {
   /// Edits user with given info
   ///
   /// 
-  Future updateUser(User body) async {
+  Future updateUser(User? body) async {
     Object? postBody = body;
 
     // verify required params are set
@@ -159,7 +157,6 @@ class UserApi {
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
     List<String> authNames = [];
 
-
     var response = await apiClient.invokeAPI(path,
                                              'PUT',
                                              queryParams,
@@ -171,7 +168,7 @@ class UserApi {
 
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
-    } else if(response.body != null) {
+    } else if(response.body != "") {
       return
           ;
     } else {
